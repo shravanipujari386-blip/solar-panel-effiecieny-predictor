@@ -99,39 +99,11 @@ sns.barplot(x=imp_df["Importance"], y=imp_df["Feature"])
 plt.title("Feature Importance")
 plt.show()
 
-import os
-
-os.makedirs("models", exist_ok=True)
-os.makedirs("data", exist_ok=True)
-
-import joblib
-
-joblib.dump(model, "models/solar_model.pkl")
-joblib.dump(scaler, "models/scaler.pkl")
-
-print("Model and scaler saved successfully!")
 
 
-import os
 
-base_path = "/content/drive/MyDrive/solar_project"
-os.makedirs(base_path, exist_ok=True)
 
-print("Folder created or already exists")
 
-import joblib
-
-joblib.dump(model, f"{base_path}/solar_model.pkl")
-joblib.dump(scaler, f"{base_path}/scaler.pkl")
-
-print("Model and scaler saved successfully in Google Drive!")
-
-os.listdir(base_path)
-
-loaded_model = joblib.load("models/solar_model.pkl")
-loaded_scaler = joblib.load("models/scaler.pkl")
-
-print("Model loaded successfully!")
 
 import joblib
 import numpy as np
@@ -209,7 +181,7 @@ print("Predicted Solar Power:", predicted_power)
 
 feature_names = X.columns.tolist()
 
-joblib.dump(feature_names, f"{base_path}/features.pkl")
+
 
 import joblib
 import pandas as pd
@@ -252,20 +224,4 @@ predicted_power = model.predict(input_scaled)
 print("Predicted Solar Power:", predicted_power[0])
 
 
-import os
-
-BASE_PATH = "/content/drive/MyDrive/solar_project"
-
-os.makedirs(BASE_PATH, exist_ok=True)
-print("Folder ready:", BASE_PATH)
-
-import joblib
-
-joblib.dump(model, f"{BASE_PATH}/solar_model.pkl")
-joblib.dump(scaler, f"{BASE_PATH}/scaler.pkl")
-joblib.dump(feature_names, f"{BASE_PATH}/features.pkl")
-
-print("✅ Model, scaler and features saved in Google Drive")
-
-os.listdir(BASE_PATH)
 
