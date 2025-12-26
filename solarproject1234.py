@@ -109,7 +109,7 @@ import joblib
 import numpy as np
 import os
 
-base_path = "/content/drive/MyDrive/solar_project"
+
 
 model = joblib.load(os.path.join(base_path, "solar_model.pkl"))
 scaler = joblib.load(os.path.join(base_path, "scaler.pkl"))
