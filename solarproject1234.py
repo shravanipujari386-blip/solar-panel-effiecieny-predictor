@@ -111,8 +111,6 @@ joblib.dump(scaler, "models/scaler.pkl")
 
 print("Model and scaler saved successfully!")
 
-from google.colab import drive
-drive.mount('/content/drive')
 
 import os
 
@@ -253,8 +251,6 @@ predicted_power = model.predict(input_scaled)
 
 print("Predicted Solar Power:", predicted_power[0])
 
-from google.colab import drive
-drive.mount('/content/drive')
 
 import os
 
