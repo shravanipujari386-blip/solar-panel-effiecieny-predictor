@@ -20,7 +20,7 @@ from sklearn.ensemble import RandomForestRegressor
 
 import joblib
 
-df = pd.read_csv("/content/spg.csv")
+df = pd.read_csv("data/spg.csv.csv")
 df.head()
 
 df.info()
