@@ -111,8 +111,8 @@ import os
 
 
 
-model = joblib.load(os.path.join(base_path, "solar_model.pkl"))
-scaler = joblib.load(os.path.join(base_path, "scaler.pkl"))
+model = joblib.load("solar_model.pkl"))
+scaler = joblib.load("scaler.pkl"))
 
 print("Model & scaler loaded successfully!")
 
