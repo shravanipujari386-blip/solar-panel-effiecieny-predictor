@@ -107,7 +107,7 @@ plt.show()
 
 import joblib
 import numpy as np
-import os
+
 
 
 
@@ -186,9 +186,9 @@ feature_names = X.columns.tolist()
 import joblib
 import pandas as pd
 
-model = joblib.load(f"{base_path}/solar_model.pkl")
-scaler = joblib.load(f"{base_path}/scaler.pkl")
-feature_names = joblib.load(f"{base_path}/features.pkl")
+model = joblib.load(f"/solar_model.pkl")
+scaler = joblib.load(f"/scaler.pkl")
+feature_names = joblib.load(f"/features.pkl")
 
 sample_input = {
     "azimuth": 180,
